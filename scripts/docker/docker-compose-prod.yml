@@ -1,0 +1,12 @@
+version: '2'
+services:
+  bot:
+    build:
+      dockerfile: docker/Dockerfile
+      context: ..
+    environment:
+      ENVIRONMENT: production
+      API_PUB: ""
+      API_PRI: ""
+    tty: true
+    stdin_open: true

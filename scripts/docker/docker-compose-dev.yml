@@ -1,0 +1,27 @@
+version: '2'
+services:
+  bot:
+    build:
+      dockerfile: docker/Dockerfile
+      context: ..
+    environment:
+      ENVIRONMENT: dry
+    stdin_open: true
+    tty: true
+    links:
+      - "dckrpostgres"
+    depends_on:
+      - "dckrpostgres"
+  dckrpostgres:
+    image: postgres:9.6-alpine
+    environment:
+      PGDATA: /data/postgres/data
+      POSTGRES_DB: livermore
+      POSTGRES_PASSWORD: livermoreballing
+      POSTGRES_USER: livermore
+    stdin_open: true
+    tty: true
+    ports:
+      - 5432:5432
+    expose:
+      - 5432
