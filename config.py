@@ -337,8 +337,8 @@ class DryRun(Config):
     MODE = "dry"
 
     # READONLY
-    API_PUB = "qzNYUeOSs7PKGhVQrb6gcjk4FQvdaRKmOiuRBPNvymi8rcCuYevPAza2T3WBLtWT"
-    API_PRI = "bfBWAZddzBwgqE8qOEWoIygjJuvJaCOHvGXEsxhyksy5Apv2valGGRtEnGfYeXhm"
+    API_PUB = ""
+    API_PRI = ""
 
     POSTGRES_CONNECT_STRING = (
         "postgresql://livermore:livermoreballing@dckrpostgres:5432/livermore"
